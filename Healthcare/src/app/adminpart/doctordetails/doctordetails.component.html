@@ -1,0 +1,33 @@
+
+<app-doctorrequest></app-doctorrequest>
+<div class="container">
+    <h1 class="mt-5">List Of Doctors In Hospital</h1>
+    <div class="row">
+        <div class=" card card-inverse  " *ngFor="let d of doctorDetails">
+
+            <h3 class="card-title border-bottom font-monospace"></h3>
+            <p class="card-text">DoctorId: {{d.doctorId}}</p>
+            <p class="card-text">DoctorName:{{d.doctorName}} </p>
+            <p class="card-text">Gender : {{d.gender}}</p>
+            <p class="card-text">specialisedIn :{{d.specialisedIn}}</p>
+            <p class="card-text">Address : {{d.address}}</p>
+            <p class="card-text">Mobile Number: {{d.mobileNumber}}</p>
+            <p class="card-text">Consulting Fees: {{d.consultingFees}}</p>
+
+            <div id="buttons">
+                <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#adddoctorModal" (click)="passCourseId(d.doctorId)">Update</button> -->
+                <button class="btn btn-danger" (click)="deletedoctor(d.doctorId,d.doctorName)">Delete</button>
+            </div>
+
+
+        </div>
+        <!-- <div class="col-2 card card-inverse text-white " id="add" data-toggle="modal" data-target="#myModal">
+            <h1 id="plus"> &plus;</h1>
+        </div> -->
+    </div>
+
+</div>
+<!-- <app-adddoctor/> -->
+<!-- <app-updatedoctor data="{{selectedDoctorId}}"></app-updatedoctor> -->
+
+<app-footer></app-footer>

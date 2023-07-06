@@ -1,0 +1,39 @@
+tr,td{
+  /* border: 1px solid black; */
+  text-align: center;
+  padding:10px;
+}
+
+table{
+  width:30%;
+  margin: auto;
+}
+
+label,input,select{
+  font-size: 20px;
+ 
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+button{
+  font-size: 20px;
+}
+.rte {
+  text-align: center;
+  font-size: 14px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.rte:hover {
+  text-decoration: underline;
+}
+.img{
+  background-image: url(src\assets\Images\sigup.jpg);
+  background-size: cover;
+}

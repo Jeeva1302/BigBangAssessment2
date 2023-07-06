@@ -1,0 +1,86 @@
+
+<div class="container mt-3 mb-3">
+    <h1 >Feedback Form</h1>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="bookingSatisfaction">How satisfied are you with the booking process?</label>
+        <select class="form-control" id="bookingSatisfaction" name="bookingSatisfaction" [(ngModel)]="item.bookingSatisfaction">
+          <option value="1">1 - Not Satisfied</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 - Very Satisfied</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="checkInSatisfaction">How satisfied are you with the check-in and welcoming process?</label>
+        <select class="form-control" id="checkInSatisfaction" name="checkInSatisfaction" [(ngModel)]="item.checkinSatisfaction">
+          <option value="1">1 - Not Satisfied</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 - Very Satisfied</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="doctorAppointmentSchedule">Has the doctor passed the appointment schedule?</label>
+        <select class="form-control" id="doctorAppointmentSchedule" name="doctorAppointmentSchedule" [(ngModel)]="item.appointmentPassed">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="appointmentDuration">How long does it take to book an appointment?</label>
+        <select class="form-control" id="appointmentDuration" name="appointmentDuration" [(ngModel)]="item.appointmentDuration">
+          <option value="Less than 30 minutes">Less than 30 minutes</option>
+          <option value="30 minutes to 1 hour">30 minutes to 1 hour</option>
+          <option value="1 to 2 hours">1 to 2 hours</option>
+          <option value="More than 2 hours">More than 2 hours</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <div class="rating-container">
+          <h5>Rate the hygiene in the hospital:</h5>
+          <div class="rating-stars" id="hygiene-stars">
+            <span class="star" value="1" (click)="rate('hygiene', 1)"></span>
+            <span class="star" (click)="rate('hygiene', 2)"></span>
+            <span class="star" (click)="rate('hygiene', 3)"></span>
+            <span class="star" (click)="rate('hygiene', 4)"></span>
+            <span class="star" (click)="rate('hygiene', 5)" ></span>
+          </div>
+          <p id="hygiene-rating"></p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="rating-container">
+          <h5>Rate the kindness of medical personnel:</h5>
+          <div class="rating-stars" id="kindness-stars">
+            <span class="star" value="1" (click)="rate('kindness', 1)"></span>
+            <span class="star" value="2" (click)="rate('kindness', 2)"></span>
+            <span class="star"
+            value="3" (click)="rate('kindness', 3)"></span>
+            <span class="star" (click)="rate('kindness', 4)"></span>
+            <span class="star" (click)="rate('kindness', 5)"></span>
+          </div>
+          <p id="kindness-rating"></p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="recommendationLikelihood">By considering overall experience, how likely would you recommend us?</label>
+        <select class="form-control" id="recommendationLikelihood" name="recommendationLikelihood" [(ngModel)]="item.recommendLikelihood">
+          <option value="1">1 - Not Likely</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 - Very Likely</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comments">Additional Comments:</label>
+        <textarea class="form-control" id="comments" name="comments" rows="3" [(ngModel)]="item.comments"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+  <app-footer></app-footer>

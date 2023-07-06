@@ -1,0 +1,39 @@
+
+
+
+
+<!-- getappointmentdetail.component.html -->
+<div class="table-container w-75 active">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Doctor ID</th>
+          <th>Doctor Name</th>
+          <th>Gender</th>
+          <th>SpecialisedIn</th>
+          <th>Address</th>
+          <th>MobileNumber</th>
+          <th>Email ID</th>
+          <th>Consulting Fees</th>
+          <th>Working Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let d of doctors">
+          <td>{{ d.doctorId }}</td>
+          <td>{{ d.doctorName }}</td>
+          <td>{{ d.gender }}</td>
+          <td>{{ d.specialisedIn }}</td>
+          <td>{{ d.address }}</td>
+          <td>{{ d.mobileNumber }}</td>
+          <td>{{ d.emailId }}</td>
+          <td>{{ d.consultingFees }}</td>
+          <td>{{ d.workingHours }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  
+  

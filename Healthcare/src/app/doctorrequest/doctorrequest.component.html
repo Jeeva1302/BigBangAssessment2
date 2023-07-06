@@ -1,0 +1,26 @@
+
+<button type="button" class="btnn" (click)="sendRequest()">Request List of Doctors</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of doctor">
+            <td>{{b.name}}</td>
+            <td>{{b.emailId}}</td>
+            <td>{{b.userName}}</td>
+            <td>{{b.role}}</td>
+            <td colspan="5">
+                <button class="buttn1" (click)="addRow(b)" style=" background-color: #28a745;">Approve</button>
+                <button class="buttn2" (click)="deleteRow(b)" style="background-color: #dc3545;">Decline</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

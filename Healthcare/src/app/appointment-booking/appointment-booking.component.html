@@ -1,0 +1,17 @@
+
+<div id="form">
+    <app-patientdetail></app-patientdetail>
+   
+    <app-appointmentdetail></app-appointmentdetail>
+    <br>
+    
+    <div class="container mb-3" >
+        <!-- <a (click)="SHOW()" style="display: inline-block;">TO see doctor Details</a> -->
+
+        <button class="button-73" role="button" (click)="SHOW()" >To see doctor details</button>
+      </div>
+    <div *ngIf="condition"><app-getdoctors></app-getdoctors></div>
+</div>
+<app-footer></app-footer>
+
+

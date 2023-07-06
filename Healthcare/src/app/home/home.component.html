@@ -1,0 +1,118 @@
+
+<router-outlet/>
+<div class="slider">
+    <div class="slides">
+      
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      
+
+      
+      <div class="slide first">
+        <img src="assets/Images/imageslide3.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/Images/imageslide2.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/Images/imageslide1.png.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/Images/imageslide4.jpg" alt="">
+      </div>
+    
+     <div class="navigation-auto">
+        <div class="auto-btn-1"></div>
+        <div class="auto-btn-2"></div>
+        <div class="auto-btn-3"></div>
+        <div class="auto-btn-4"></div>
+      </div>
+     
+    </div>
+
+<div class="navigation-mannual">
+    <label for="radio1" class="mannual-btn"></label>
+    <label for="radio2" class="mannual-btn"></label>
+    <label for="radio3" class="mannual-btn"></label>
+    <label for="radio4" class="mannual-btn"></label>
+  </div>
+ 
+</div>
+<script>
+    var counter = 1;
+    setInterval(function()  {
+      document.getElementById('radio'+ counter).checked = true;
+      counter++; 
+
+      if(counter>4){
+        counter=1
+      }
+
+    },4000);
+  </script>
+<br>
+
+<section class="section_2">
+    <div class="options">
+        <ul>
+            
+            <a href="#">Consult Online</a>
+            <a href="#">Buy Medicals</a>
+            <a href="#">View Healthcare</a> 
+        </ul>
+    </div>
+</section>
+<section class="section_3">
+    
+    <div class="para-content">
+        <div class="para_head">
+        <h1> My Fellow Indians,</h1>
+    </div><br>
+        <p>
+            Today is a landmark day for RJ as we complete 39 years of dedicated patient care. Over the years RJ has been he pioneer of healthcare in India, and we are humbled by the love and trust placed in us by over 200 million patients and their families. It has motivated us to put in tireless efforts and remain unwavering in our commitment to bring you the best healthcare in the world.
+        </p>
+        <p>
+            We have the best doctors and the most care-focused teams coupled with the most advanced equipment, cutting-edge treatments and technologies, including Proton therapy, robotic surgeries, artificial intelligence and more. These ensure we can get you healthy quickly so you can get back to leading a happy and fulfilling life.
+
+As our country emerges from the pandemic, RJ will focus its efforts on the NCD epidemic, including diabetes, CVD and cancer. Sedentary lifestyles and unhealthy diets have made our youth susceptible to these chronic diseases. Over 50% of premature mortality in India in the 30+ age group can be attributed to NCDs. India will spend around $5 trillion by 2030 to combat NCDs.
+
+To become a developed nation, we must first ensure that we are a healthy nation, RJ is committed to battling the NCD epidemic to ensure the youth of our nation remains healthy and can accelerate our nation’s development.
+        </p><br>
+        <p>
+            Our Prime Minister’s clarion call for ‘Heal in India’ is a great endorsement and a signal that the world needs a new vision for healthcare. A system that is holistic. A system that is proactive and a system that optimises quality of life. I believe India, with its heritage of holistic healthcare, can take the lead in providing this new system of care to the world. Patients from over 150 countries come to India for treatment that is at par with western countries at a fraction of the cost. With the ‘Heal in India’ initiative, I am sure we will have the opportunity to serve many more people from around the world right here in India.
+        </p>
+        <br>
+        
+    </div>
+    <div class="image">
+      <div class="img">
+        <img src="assets/Images/secimg1.jpg" alt="Image 1" width="45%" height="50%" class="hover-effect">
+      </div>
+      <div class="img">
+        <img src="assets/Images/secimg2.jpg" alt="Image 2" width="45%" height="50%" class="hover-effect">
+      </div>
+      <div class="img">
+        <img src="assets/Images/secimg3.jpg" alt="Image 3" width="45%" height="60%" class="hover-effect">
+      </div>
+    </div>
+    
+   
+</section>
+
+<section class="section_4">
+    <div>
+        <iframe class="iframe1" autoplay width="350" height="260" src="https://www.youtube.com/embed/wQ2TN_gI3sE?autoplay=1&mute=1">
+        </iframe>
+    </div>
+    <div>
+        <iframe  class="iframe1" autoplay width="350" height="260" src="https://www.youtube.com/embed/iHXF-tLi9_Q?autoplay=1&mute=1">
+        </iframe>
+    </div>
+    <div>
+        <iframe class="iframe1" autoplay width="350" height="260" src="https://www.youtube.com/embed/FjM_rsdcIJw?autoplay=1&mute=1">
+        </iframe>
+    </div>
+</section>
+<app-footer></app-footer>

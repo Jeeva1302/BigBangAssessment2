@@ -1,0 +1,113 @@
+
+  <div class="container">
+    <h2>Personal Details Form</h2>
+    <form (ngSubmit)="submitForm(myForm)" #myForm="ngForm" [ngClass]="{'was-validated': myForm.submitted}">
+      <div class="form-group">
+        <label for="patientName">Patient Name</label>
+        <input type="text" class="form-control" id="patientName" placeholder="Enter patient name" name="patientname" [(ngModel)]="item.patientName" required>
+        <div *ngIf="myForm.submitted && myForm.controls['patientname'].invalid" class="text-danger">
+          Patient Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age" placeholder="Enter age here" name="age" [(ngModel)]="item.age" required>
+        <div *ngIf="myForm.submitted && myForm.controls['age'].invalid" class="text-danger">
+          Age is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender" name="gender" [(ngModel)]="item.gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="transgender">Transgender</option>
+        </select>
+        <div *ngIf="myForm.submitted && myForm.controls['gender'].invalid" class="text-danger">
+          Gender is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea class="form-control" id="address" rows="3" name="address" placeholder="Enter address" [(ngModel)]="item.address" required></textarea>
+        <div *ngIf="myForm.submitted && myForm.controls['address'].invalid" class="text-danger">
+          Address is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="tel" class="form-control" id="mobileNumber" name="mobilenumber" placeholder="Enter mobile number" [(ngModel)]="item.mobileNumber" required pattern="[0-9]{10}">
+        <div *ngIf="myForm.submitted && myForm.controls['mobilenumber'].invalid" class="text-danger">
+          Mobile Number is required and should be a 10-digit number
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="patientType">Type of Patient</label>
+        <select class="form-control" id="patientType" name="patienttype" [(ngModel)]="item.typeOfPatient" required>
+          <option value="">Select Type</option>
+          <option value="in">In</option>
+          <option value="out">Out</option>
+        </select>
+        <div *ngIf="myForm.submitted && myForm.controls['patienttype'].invalid" class="text-danger">
+          Type of Patient is required
+        </div>
+      </div>
+      <div class="form-group">
+        <div *ngIf="myForm.submitted && myForm.invalid" class="text-danger">
+          Please fill in all the required details correctly.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+  
+
+
+  
+ 
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <button type="submit"  role="button" class="button-64"  (click)=" getPatientByName()" ><span class="text">Review the Entered Details</span></button>
+</div>
+  
+
+
+
+<div class="table-container w-75 active ">
+  <div  class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        
+        <th>Patient ID</th>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>MobileNumber</th>
+        <th>Type of Patient </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let p of patient">
+        <td>{{p.patientId}}</td>
+        <td>{{p.patientName}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.address}}</td>
+        <td>{{p.mobileNumber}}</td>
+        <td>{{p.typeOfPatient}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+
+
+
+
+
+  

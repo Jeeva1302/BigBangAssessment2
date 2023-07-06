@@ -1,0 +1,33 @@
+#footer {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+   
+  }
+  
+  #footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  #footer a:hover {
+    color: #777;
+  }
+  
+ 
+  
+  .social-media p {
+    margin-bottom: 5px;
+  }
+  
+  .social-media img {
+    margin: 0 5px;
+  }
+  
+  .paraf {
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,67 @@
+
+   <div class="container">
+    <h2>Appointment Form</h2>
+    <form (ngSubmit)="submitForm(myForm)" #myForm="ngForm" [ngClass]="{'was-validated': myForm.submitted}">
+      <div class="form-group">
+        <label for="patientId">Patient ID:</label>
+        <input type="text" class="form-control" id="patientId" [(ngModel)]="appointment.patientId" name="patientId" required>
+        <div *ngIf="myForm.submitted && myForm.controls['patientId'].invalid" class="text-danger">
+          Patient ID is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="problem">Problem:</label>
+        <textarea class="form-control" id="problem" [(ngModel)]="appointment.problem" name="problem" required></textarea>
+        <div *ngIf="myForm.submitted && myForm.controls['problem'].invalid" class="text-danger">
+          Problem is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dateToVisit">Date to Visit:</label>
+        <input type="date" class="form-control" id="dateToVisit" [(ngModel)]="appointment.dateToVisit" name="dateToVisit" required>
+        <div *ngIf="myForm.submitted && myForm.controls['dateToVisit'].invalid" class="text-danger">
+          Date to Visit is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="timeslot">Timeslot:</label>
+        <select class="form-control" id="timeslot" [(ngModel)]="appointment.timeslot" name="timeslot" required>
+          <option value="">Select Your Timeslot</option>
+          <option value="2Pm to 4pm">2Pm to 4pm</option>
+          <option value="4pm to 6pm">4pm to 6pm</option>
+          <option value="6pm to 8pm">6pm to 8pm</option>
+          <option value="8pm to 10pm">8pm to 10pm</option>
+          <option value="6am to 8am">6am to 8am</option>
+          <option value="8am to 10am">8am to 10am</option>
+        </select>
+        <div *ngIf="myForm.submitted && myForm.controls['timeslot'].invalid" class="text-danger">
+          Timeslot is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="specialisation">Specialisation Looking For:</label>
+        <select class="form-control" id="specialisation" [(ngModel)]="appointment.specialisationLookingFor" name="specialisationLookingFor" required>
+          <option value="">Select a Specialization</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="gynaecology">Gynaecology</option>
+          <option value="ophthalmology">Ophthalmology</option>
+          <option value="dentist">Dentist</option>
+          <option value="orthopedics">Orthopedics</option>
+          <option value="dermatology">Dermatology</option>
+          <option value="neurology">Neurology</option>
+        </select>
+        <div *ngIf="myForm.submitted && myForm.controls['specialisationLookingFor'].invalid" class="text-danger">
+          Specialisation Looking For is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="doctorId">Doctor ID:</label>
+        <input type="text" title="If you don't know the Doctor ID, please click the 'To see doctor details' button" class="form-control" id="doctorId" [(ngModel)]="appointment.doctorId" name="doctorId" required>
+        <div *ngIf="myForm.submitted && myForm.controls['doctorId'].invalid" class="text-danger">
+          Doctor ID is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+  </div>
+  

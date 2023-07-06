@@ -1,0 +1,171 @@
+.section_3{
+    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.para-content{
+    width: 50%;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    display: right;
+    float: right;
+}
+.para_head{
+    color:  #007C9D;
+    font-size: larger;
+
+}
+.image img{
+      
+        border-radius: 25px;
+        box-shadow: #039dc8;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.img{
+  padding: 30px;
+
+}
+.section_4{
+  display: flex;
+  justify-content:space-between;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.iframe1{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 10px;
+}
+
+.section_2{
+    background-color: #a2e0ff9a;
+    padding: 20px 0;
+}
+.section_2 .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section_2 .options ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section_2 .options ul a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+.section_2 .options ul a:hover{
+    color: #0095ff;
+}
+
+  
+.slider{
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 100%;
+    height: 700px;
+  }
+  
+  .navigation-mannual{
+    position: absolute;
+    width: 1250px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mannual-btn{
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 2s;
+  }
+  
+  .mannual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .mannual-btn:hover{
+    background-color: #ccc;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .section_3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .iframe1 {
+      width: 100%;
+    }
+  }
+
+
+
+
+  
+
+
+  
+  
+
+
+
+  

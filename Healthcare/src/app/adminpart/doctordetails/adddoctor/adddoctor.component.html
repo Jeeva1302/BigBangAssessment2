@@ -1,0 +1,58 @@
+
+<div class="container">
+
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Your Particular Details</h5>
+            <button type="button" class="close  btn btn-danger" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <!-- Add your form fields here -->
+              <div class="form-group">
+                <label>Doctor Name:</label>
+                <input type="text" class="form-control" name="doctorName" [(ngModel)]="item.doctorName" >
+              </div>
+              <div class="form-group">
+                <label >Gender :</label>
+                <input type="text" class="form-control" name="gender" [(ngModel)]="item.gender">
+              </div>
+              <div class="form-group">
+                <label >SpecialisedIn :</label>
+                <input type="text" class="form-control" name="specialisedIn" [(ngModel)]="item.specialisedIn" >
+              </div>
+              <div class="form-group">
+                <label >Address :</label>
+                <input type="text" class="form-control" name="Address" [(ngModel)]="item.address">
+              </div>
+              <div class="form-group">
+                <label >Mobile Number :</label>
+                <input type="tele" class="form-control" name="mobilenumber" [(ngModel)]="item.mobileNumber" >
+              </div>
+              <div class="form-group">
+                <label >EmailId :</label>
+                <input type="text" class="form-control" name="EmailId" [(ngModel)]="item.emailId" >
+              </div>
+              <div class="form-group">
+                <label >Cosulting Fees :</label>
+                <input type="decimal" class="form-control" name="consultingfees" [(ngModel)]="item.consultingFees">
+              </div>
+              <div class="form-group">
+                <label >Working Hours :</label>
+                <input type="text" class="form-control" name="workinghours" [(ngModel)]="item.workingHours" >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="submitForm()">Add</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  

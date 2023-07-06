@@ -1,0 +1,50 @@
+<div class="img"><h1 style="text-align: center;">SIGN IN</h1>
+<div style="margin-top: 150px;">
+  <table>
+      <tr>
+          
+          <td><input class="form-control" 
+              required [min]="1" 
+              type="text" 
+              [(ngModel)]= "user.userName"
+              #iname="ngModel"
+              placeholder="Enter UserName Here">
+          </td></tr>
+          <tr><td>
+              <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                  <span *ngIf="iname.errors?.['required']"> Please fill the username</span>
+                  <span  *ngIf="iname.errors?.['min']">Should not be less than 1</span> 
+              </span>
+          </td>
+      </tr>
+      <tr>
+         
+          <td><input class="form-control" type="password"
+              required
+              minlength="1"
+               [(ngModel)]="user.password"
+               #iname="ngModel"
+               placeholder="Enter Password Here ">
+          </td></tr>
+          <tr>
+          <td>
+               <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                  <span *ngIf="iname.errors?.['required']">Please enter the password</span>
+                  <span  *ngIf="iname.errors?.['minlength']">Password should be min 20 chars long</span> 
+               </span>
+          </td>
+      </tr>
+      <tr>
+          <td><button class="btn btn-success" (click)="addUser()">LogIN</button></td>
+          
+      </tr>
+      <tr>
+          <td colspan="2" class="rte" (click)="register()">Haven't any Account? NewUser</td>
+      </tr>
+      
+      <tr>
+          <td colspan="2" *ngIf="toggle">Invalid Credentials</td>
+      </tr>
+  </table>
+</div>
+</div>

@@ -1,0 +1,31 @@
+
+
+<!-- getappointmentdetail.component.html -->
+<div class="table-container w-75 active">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Appointment ID</th>
+          <th>Patient ID</th>
+          <th>Date to Visit</th>
+          <th>Timeslot</th>
+          <th>Specialisation</th>
+          <th>Doctor ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let app of appointments">
+          <td class="text-center">{{ app.appointmentId }}</td>
+          
+          <td class="text-center">{{ app.patientId }}</td>
+          <td class="text-center">{{ app.dateToVisit }}</td>
+          <td class="text-center">{{ app.timeslot }}</td>
+          <td class="text-center">{{ app.specialisationLookingFor }}</td>
+          <td class="text-center">{{ app.doctorId }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  

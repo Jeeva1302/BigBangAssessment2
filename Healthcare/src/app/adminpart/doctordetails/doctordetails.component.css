@@ -1,0 +1,85 @@
+.row{
+    margin-top: 5rem;
+  }
+  h1{
+    text-align: center;
+  }
+  .card{
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 15.5rem;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  #add{
+    background-color: black;
+    opacity: .2;
+    height: 28rem;
+  }
+  #plus{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+  }
+  #add:hover{
+    box-shadow: 0 4px 80px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    opacity: .3;
+  
+  }
+  .body{
+    background-color: aliceblue;
+  }
+  #buttons{
+    display: flex;
+  }
+  button{
+    margin-left:.7rem;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007bff;
+    animation: colorChange 5s infinite alternate;
+  
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #007bff;
+    }
+    50% {
+      color: #ff4500;
+    }
+    100% {
+      color: #007bff;
+    }
+  }
+  @keyframes moveAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(200px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .card {
+    background-image: url('D:\BigBangAssessment2\Healthcare\src\assets\Images\logo1.png');
+    background-size: cover;
+    background-size: 130px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    
+  }
+  
+  

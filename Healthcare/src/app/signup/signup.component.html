@@ -1,0 +1,107 @@
+<div class="img">
+    <h1 style="text-align: center;">SIGN UP</h1>
+    <p style="text-align: center; color: rgb(241, 9, 9);">{{result}}</p>
+    <div style="margin-top: 100px;">
+        <table>
+            <tr>
+
+                <td><input class="form-control" required type="text" [(ngModel)]="doctor.name" #iname="ngModel"
+                        placeholder="Enter Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                        <span *ngIf="iname.errors?.['required']">shouldn't be Empty</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+
+                <td><input class="form-control" required type="text" [(ngModel)]="doctor.userName" #iname="ngModel"
+                        placeholder="Enter  UserName">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                        <span *ngIf="iname.errors?.['required']">shouldn't be Empty</span>
+                    </span>
+                </td>
+            </tr>
+            <!-- <tr>
+          <td><label class="form-control">Address</label></td>
+          <td><input class="form-control" 
+              required 
+              type="text" 
+              [(ngModel)]="intern.address" 
+              #iname="ngModel"
+              placeholder="Full Name">
+          </td>
+          <td>
+              <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                  <span *ngIf="iname.errors?.['required']">shouldn't be Empty</span>
+              </span>
+          </td>
+      </tr> -->
+            <tr>
+
+                <td><input class="form-control" required type="password" [(ngModel)]="doctor.userPassword"
+                        #iname="ngModel" placeholder="Enter Password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                        <span *ngIf="iname.errors?.['required']">shouldn't be Empty</span>
+                    </span>
+                </td>
+            </tr>
+            <!-- <tr>
+          <td><label class="form-control">Phone</label></td>
+          <td><input class="form-control" 
+              type="text" 
+              [(ngModel)]="intern.phoneNumber"
+              minlength="10" maxlength="10"
+              #pname="ngModel"
+              placeholder="Phone">
+          </td>
+          <td>
+              <span *ngIf="pname.touched && pname.invalid" class="alert alert-danger">
+                  <span *ngIf="pname.errors"> Should be 10 Numbers only</span>
+              </span>
+          </td>
+          
+      </tr> -->
+            <tr>
+
+                <td><input class="form-control" type="text" [(ngModel)]="doctor.emailId" placeholder="Enter Email"></td>
+            </tr>
+            <!-- <tr>
+
+                <td><Select class="form-control" [(ngModel)]="doctor.role" id="role" name="role" #role="ngModel">
+                        <option value="">choose Role</option>
+                        <option value="user">User</option>
+                        <option value="doctor">Doctor</option>
+                    </Select>
+                </td>
+            </tr> -->
+            <tr>
+                 
+                <td><input class="form-control" type="text" [(ngModel)]="doctor.role" placeholder="Enter Role(user,doctor)"></td>
+            </tr>
+
+
+
+            <tr>
+                <td><button class="btn btn-success" (click)="addDoctor()">Register</button></td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2" (click)="signin()" class="rte">Already have an Account? signin</td>
+            </tr>
+
+        </table>
+    </div>
+</div>

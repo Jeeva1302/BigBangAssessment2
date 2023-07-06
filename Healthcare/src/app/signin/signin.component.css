@@ -1,0 +1,93 @@
+/* Additional CSS properties
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .invalid-feedback {
+    color: red;
+    display: none;
+  }
+  
+  .form-control.is-invalid {
+    border-color: red;
+  }
+  
+  .btn-primary {
+    width: 25%;
+    align-items: center;
+  }
+  .btn{
+    align-items: center;
+  }
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(245, 245, 245,.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .back{
+    background-image: url(../../assets/Images/imageslide2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+  }
+  input{
+    background-color:transparent ;
+  }
+  #roles{
+    background-color:transparent;
+  }
+  label{
+    font-weight: 600;
+    color: aliceblue;
+  }
+    .btn-primary {
+    width: 100%;
+  } */
+
+  tr,td{
+    /* border: 1px solid black; */
+    text-align: center;
+    padding:10px;
+}
+
+table{
+    width:30%;
+    margin: auto;
+}
+
+label,input,select{
+    font-size: 20px;
+}
+
+button{
+    font-size: 20px;
+}
+body{
+    background-color: #323232;
+}
+.rte {
+  text-align: center;
+  font-size: 14px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.rte:hover {
+  text-decoration: underline;
+}
+
+.img{
+  background-image: url(src\assets\Images\signin.jpg);
+  background-size: cover;
+  height: 580px;
+}

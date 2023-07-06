@@ -1,0 +1,40 @@
+/* getappointmentdetail.component.css */
+.table-container {
+    margin-top: 20px;
+  }
+  
+  /* .table-container table {
+    width: 100%;
+  } */
+  
+  .table-container th,
+  .table-container td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table-container th {
+    background-color: #f2f2f2;
+  }
+  table{
+    margin-left:150px;
+    margin-right: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: right;
+  }
+  
+  /* Media query for screens with a maximum width of 768 pixels */
+  @media (max-width: 768px) {
+    .table-container {
+      overflow-x: scroll;
+    }
+  }
